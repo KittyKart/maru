@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const { TOKEN } = require("./config.json")
+const { TOKEN, MONGOSTRING } = require("./config.json")
 const fs = require('fs')
 const mongoose = require('mongoose')
 var prefix = "//"
@@ -41,7 +41,7 @@ db.once('open', function() {
     console.log("Connected to database!")
 });
 
-mongoose.connect("mongodb+srv://daddy:cuminme@cluster0.aprfv.mongodb.net/maru", { 
+mongoose.connect(MONGOSTRING, { 
     useNewUrlParser: true, useUnifiedTopology: true
 })
 client.login(TOKEN)
