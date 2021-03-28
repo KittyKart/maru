@@ -1,4 +1,3 @@
-const paginationEmbed = require('discord.js-pagination');
 const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: "help",
@@ -6,7 +5,7 @@ module.exports = {
     execute(message, args, client) {
     if(!args[0]) {
         let e = new MessageEmbed()
-        e.setTitle("Command categoryes")
+        e.setTitle("Command categories")
         e.addField("Mod commands", "Type //help mod to view")
         e.addField("Misc commands", "Type //help misc to view")
         e.addField("NSFW commands", "Type //help nsfw to view")
@@ -53,20 +52,5 @@ module.exports = {
         return;
     }
 
-    /* 
-    const embed1 = new MessageEmbed()
-    .setTitle("Commands")
-    .addField("`warn`", "Warn a user")
-    .addField("`rmpunish`", "Remove a punishment Usage: rmpunish [infraction id]")
-    .addField("`search`", "Check a users infractions")
-    .addField("`kick`", "Kick a user")
-    .addField("`ban`", "Ban a user")
-    .addField("`ping`", "Check the bot's ping")
-    .addField("`serverinfo`", "Get the server information")
-    .addField("`hentai`", "Fetch a hentai image")
-    .addField("`thighs`", "Fetch a thighs image")
-    
-    message.channel.send(embed1)
-    */
     }
 }

@@ -11,6 +11,11 @@ module.exports = {
 
     fetch("https://shiro.gg/api/images/nsfw/hentai")
     .then(res => res.json())
-    .then(body => message.channel.send(body.url))
+    .then(body => {
+        const e = new Discord.MessageEmbed()
+            .setDescription(`Here you go`)
+            .setImage(body.url)
+            message.channel.send(e)
+    })
     }
 }
