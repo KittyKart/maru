@@ -48,6 +48,7 @@ module.exports = {
         e.addField("`thighs`", "Fetch some thighs")
         e.addField("`yaoi`", "Fetch some yaoi")
         e.addField("`fuck`", "Fuck someone")
+        e.addField("`anal`", "Fetch some anal")
         message.channel.send(e)
         return;
     }
