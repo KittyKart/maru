@@ -1,5 +1,5 @@
 exports.run = async (client, message, args) => {
-		message.channel.send(`🏓Latency is ${message.createdTimestamp - Date.now()}ms.`);
+		message.channel.send(`🏓Latency is ${Date.now() - message.createdTimestamp}ms.`);
 	};
 
 
