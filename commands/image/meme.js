@@ -6,9 +6,9 @@ exports.run = async (client, message, args) => {
         .then(res => res.json())
         .then(body => {
             const e = new Discord.MessageEmbed()
-            e.setTitle([body.title](body.link))
+            e.setTitle(body.title)
             e.setImage(body.url)
-            e.setFooter(`👍 ${body.ups} `)
+            e.setFooter(`👍 ${body.ups} | ${body.postLink}`)
             message.channel.send(e)
         })
     }
