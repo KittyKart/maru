@@ -1,7 +1,4 @@
-module.exports = {
-    name: "kick",
-    description: "kick a member from the server",
-    async execute(client, message, args) {
+exports.run = async (client, message, args) => {
         if (!message.author.hasPermission("KICK_MEMBERS")) {
             message.channel.send("You are not allowed to use this sowwwwy. You need the `KICK_MEMBERS` permission.")
             return;
@@ -31,8 +28,8 @@ module.exports = {
 
         let date = moment().format('MMMM Do YYYY, h:mm A (AT)')
 
-        const mongo = require('../utils/mongo')
-        const infraction = require('../models/infraction')
+        const mongo = require('../../utils/mongo')
+        const infraction = require('../../models/infraction')
 
         member.kick({ reason: reason });
 
@@ -56,4 +53,9 @@ module.exports = {
     })
 
     }
-}
+    exports.help = {
+        name: "kick",
+        aliases: [],
+        description: "Ban a user",
+        useage: "[user] (reason)"
+    }

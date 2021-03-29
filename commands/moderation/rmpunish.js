@@ -1,10 +1,7 @@
-const infraction = require('../models/infraction')
+const infraction = require('../../models/infraction')
 const mongoose = require('mongoose')
 const { Message } = require('discord.js')
-module.exports = {
-    name: 'rmpunish',
-    description: "remove a punishment",
-    async execute(message, args, client) {
+exports.run = async (client, message, args) => {
         if (!message.member.hasPermission("KICK_MEMBERS")) {
             message.channel.send("You are not allowed to use this sowwwwy. You need the `KICK_MEMBERS` permission.")
             return;
@@ -22,4 +19,9 @@ module.exports = {
         message.channel.send(`Punishment with ID ${args[0]} was successfully removed`)
 
     }
-}
+    exports.help = {
+        name: "rmpunish",
+        aliases: [],
+        description: "Remove a punishment",
+        useage: "[infraction id] "
+    }

@@ -1,10 +1,7 @@
 const { config } = require("process");
 
-module.exports = {
-	name: 'eval',
-	description: 'eval code',
-	async execute(message, args, client) {
-        if (!message.member.hasPermission("ADMINISTRATOR")) return;
+exports.run = async (client, message, args) => {
+        if(message.author.tag ==! "Crafter#0001") return;
         const { runInNewContext } = require("vm");
         const Discord = require("discord.js");
         const chalk = require("chalk");
@@ -278,4 +275,11 @@ module.exports = {
             });
         }
         
-	}};
+	};
+
+  exports.help = {
+    name: "eval",
+    aliases: [],
+    description: "",
+    useage: ""
+}

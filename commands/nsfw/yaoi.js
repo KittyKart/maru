@@ -1,10 +1,7 @@
 const fetch = require('node-fetch') 
 const Discord = require('discord.js')
 
-module.exports = {
-    name: "yaoi",
-    description: "fetch some yaoi",
-    async execute(message, args) {
+exports.run = async (client, message, args) => {
         if(message.channel.nsfw == false) {
             message.channel.send("HEY! THIS CHANNEL ISN'T NSFW. PLEASE SET CHANNEL TO NSFW YOUR HORNY FUCK")
             return;
@@ -20,4 +17,9 @@ module.exports = {
         })
 
     }
-}
+    exports.help = {
+        name: "yaoi",
+        aliases: [],
+        description: "Fetch some yaoi images",
+        useage: ""
+    }

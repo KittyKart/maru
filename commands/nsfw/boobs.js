@@ -1,9 +1,6 @@
 const fetch = require('node-fetch')
 
-module.exports = {
-    name: "boobs",
-    description: "fetch some boobs",
-    async execute(message, args, client) {
+exports.run = async (client, message, args) => {
     
     if(message.channel.nsfw == false) {
         message.channel.send("HEY! THIS CHANNEL ISN'T NSFW. PLEASE SET CHANNEL TO NSFW YOUR HORNY FUCK")
@@ -21,4 +18,9 @@ module.exports = {
 
     
     }
-}
+    exports.help = {
+        name: "boobs",
+        aliases: [],
+        description: "Fetch some boobs images",
+        useage: ""
+    }

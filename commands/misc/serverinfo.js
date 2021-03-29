@@ -1,9 +1,6 @@
 const Discord = require('discord.js')
 
-module.exports = {
-name: "serverinfo",
-description: "serverinfo command",
-async execute(message, args) {
+exports.run = async (client, message, args) => {
 let embed = new Discord.MessageEmbed()
             .setColor("RANDOM")
             .setTitle("Server Info")
@@ -14,6 +11,11 @@ let embed = new Discord.MessageEmbed()
             .addField("Emoji Count", `This server has ${message.guild.emojis.cache.size} emojis`)
             .addField("Roles Count", `This server has ${message.guild.roles.cache.size} roles`)
             message.channel.send(embed)
-}
+};
 
+exports.help = {
+    name: "serverinfo",
+    aliases: [],
+    description: "Fetch server information",
+    useage: ""
 }

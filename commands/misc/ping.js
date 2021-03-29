@@ -1,7 +1,11 @@
-module.exports = {
-	name: 'ping',
-	description: 'Ping!',
-	execute(message, client) {
-		message.channel.send(`🏓Latency is ${Date.now() - message.createdTimestamp}ms.`);
-	},
-};
+exports.run = async (client, message, args) => {
+		message.channel.send(`🏓Latency is ${message.createdTimestamp - Date.now()}ms.`);
+	};
+
+
+exports.help = {
+	name: "ping",
+	aliases: [],
+	description: "",
+	useage: ""
+}

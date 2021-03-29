@@ -2,10 +2,7 @@ const { MessageAttachment } = require('discord.js');
 const mongoose = require('mongoose')
 const moment = require('moment')
 
-module.exports = {
-	name: 'warn',
-	description: 'warn a user',
-	async execute(message, args, client) {
+exports.run = async (client, message, args) => {
         if (!message.member.hasPermission("KICK_MEMBERS")) {
             message.channel.send("You are not allowed to use this sowwwwy. You need the `KICK_MEMBERS` permission.")
             return;
@@ -35,8 +32,8 @@ module.exports = {
 
         let date = moment().format('MMMM Do YYYY, h:mm A (AT)')
 
-        const mongo = require('../utils/mongo')
-        const infraction = require('../models/infraction')
+        const mongo = require('../../utils/mongo')
+        const infraction = require('../../models/infraction')
 
         await mongo().then(async (mongoose) => {
         try {
@@ -57,4 +54,9 @@ module.exports = {
     })
   }
 
-	};
+  exports.help = {
+    name: "warn",
+    aliases: [],
+    description: "Warn a user",
+    useage: "[user] (reason)"
+}

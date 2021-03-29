@@ -1,10 +1,7 @@
 const mongoose = require('mongoose')
-const infraction = require('../models/infraction')
+const infraction = require('../../models/infraction')
 const Discord = require('discord.js')
-module.exports = {
-    name: "search",
-    description: "search a user",
-    async execute(message, args) {
+exports.run = async (client, message, args) => {
         const member = message.mentions.members.first() || args[0];
         let e = new Discord.MessageEmbed()
         let infractions = await infraction
@@ -25,4 +22,9 @@ module.exports = {
         message.channel.send(e)
 
         }
-}
+        exports.help = {
+            name: "search",
+            aliases: [],
+            description: "Search a user",
+            useage: "[user]"
+        }

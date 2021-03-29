@@ -1,10 +1,7 @@
 const fetch = require('node-fetch') 
 const Discord = require('discord.js')
 
-module.exports = {
-    name: "slap",
-    description: "slap someone",
-    async execute(message, args) {
+exports.run = async (client, message, args) => {
         if(!args[0]) {
             message.channel.send("Please specify someone to slap.")
             return;
@@ -25,4 +22,9 @@ module.exports = {
         })
 
     }
+exports.help = {
+    name: "slap",
+    aliases: [],
+    description: "Slap a user",
+    useage: "[user]"
 }
