@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
         const member = message.mentions.members.first() || args[0];
         let e = new Discord.MessageEmbed()
         let infractions = await infraction
-        .find({ userid: member.id, guild: message.guild.id })
+        .find({ userid: member.user.id, guild: message.guild.id })
 
          
         await infractions.forEach((infraction) => {
