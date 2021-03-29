@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
             const e = new Discord.MessageEmbed()
             e.setTitle(body.title)
             e.setImage(body.url)
-            e.setFooter(`👍 ${body.ups}`)
+            e.setFooter(`👍 ${body.ups} | ${body.url}`)
             message.channel.send(e)
         })
     }
