@@ -1,6 +1,5 @@
 exports.run = async (client, message, args) => {
 	let embed = new Discord.MessageEmbed()
-		.setColor("RANDOM")
 		.setTitle("Actually Good Bots")
 		.setDescription(`Our Partners`)
 		.addField("EpicBot", `A simple, multipurpose Discord bot. - [Invite](https://epic-bot.com/invite)`)
