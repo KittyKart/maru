@@ -21,4 +21,6 @@ Run ```npm i``` (Make sure nodejs is installed if it says command not found) <br
 Then run ```node index.js```
 And your set!
 
-
+## Maru Partners
+[Epicbot](https://discord.com/oauth2/authorize?client_id=751100444188737617&scope=bot&permissions=2146958847)
+[Jaybot](https://discord.com/oauth2/authorize?client_id=817932772424679434&scope=bot&permissions=8)
