@@ -2,7 +2,6 @@ const Discord = require('discord.js')
 
 exports.run = async (client, message, args) => {
 let embed = new Discord.MessageEmbed()
-            .setColor("RANDOM")
             .setTitle("Server Info")
             .setImage(message.guild.iconURL)
             .setDescription(`${message.guild}'s information`)
