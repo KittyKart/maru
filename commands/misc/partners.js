@@ -1,6 +1,6 @@
 exports.run = async (client, message, args) => {
 	let embed = new Discord.MessageEmbed()
-		.setTitle("Actually Good Bots")
+		.setTitle("Our Partners")
 		.setDescription(`Our Partners`)
 		.addField("EpicBot", `A simple, multipurpose Discord bot. - [Invite](https://epic-bot.com/invite)`)
 		.addField("Jaybot", `Sexiest Discord bot ever made. - [Invite](https://discord.com/oauth2/authorize?client_id=817932772424679434&scope=bot&permissions=8)`)
@@ -14,3 +14,5 @@ exports.help = {
 	description: "Sends invite to better bots",
 	useage: ""
 }
+
+// i hate u crafter
