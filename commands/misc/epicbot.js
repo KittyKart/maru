@@ -1,11 +1,17 @@
 exports.run = async (client, message, args) => {
-		message.channel.send(`Invite EpicBot now using -> https://epic-bot.com/invite`);
+	let embed = new Discord.MessageEmbed()
+		.setColor("RANDOM")
+		.setTitle("Actually Good Bots")
+		.setDescription(`Our Partners`)
+		.addField("EpicBot", `A simple, multipurpose Discord bot. - [Invite](https://epic-bot.com/invite)`)
+		.addField("Jaybot", `Sexiest Discord bot ever made. - [Invite](https://discord.com/oauth2/authorize?client_id=817932772424679434&scope=bot&permissions=8)`)
+		message.channel.send(embed);
 	};
 
 
 exports.help = {
-	name: "epicbot",
+	name: "partners",
 	aliases: [],
-	description: "Sends invite to the best bot ever",
+	description: "Sends invite to better bots",
 	useage: ""
 }
