@@ -11,7 +11,8 @@ Populate it like so <br/>
 }
 ```
 ### Method 1 of running the bot (Docker, recommended way)
-Install Docker and Docker-compose
+Install Docker and Docker-compose <br/>
+Once done follow instructions for your OS below <br/>
 Windows: ```docker-compose up```<br/>
 Linux: ```sudo docker-compose up```<br/>
 And your set!
