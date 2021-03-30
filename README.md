@@ -9,6 +9,7 @@ Populate it like so <br/>
 "TOKEN": "Discord bot token here"
 "MONGOSTRING": "Mongo DB URI string here"
 }
+```
 ### Method 1 of running the bot (Docker, recommended way)
 Install Docker and Docker-compose
 Windows: ```docker-compose up```<br/>
