@@ -1,5 +1,5 @@
 # Maru
-Maru is an open source Discord bot with a full moderation system and image command 
+Maru is an open source Discord bot with a full moderation system and image commands 
 ### Note this bot is a work in progress
 # Running the bot
 Create a file called ```config.json``` <br/>
